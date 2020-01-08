@@ -19,6 +19,7 @@ temp = np.loadtxt("geology_data.txt")
 x_tr = temp[:,:20]
 y_tr = temp[:,20:]
 
+
 x_tr = torch.from_numpy(x_tr).type(torch.cuda.FloatTensor)
 y_tr = torch.from_numpy(y_tr).type(torch.cuda.FloatTensor)
 
