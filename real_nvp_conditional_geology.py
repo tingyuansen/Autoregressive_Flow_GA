@@ -16,8 +16,8 @@ temp = np.loadtxt("geology_data.txt")
 
 # velocities (1-10), depths of voronoi cells (1-10),
 # and then the outputs are 11 predicted Love wave velocities (one for each of 11 frequencies)
-x = temp[:,:20]
-y = temp[:,20:]
+x_tr = temp[:,:20]
+y_tr = temp[:,20:]
 
 x_tr = torch.from_numpy(x_tr).type(torch.cuda.FloatTensor)
 y_tr = torch.from_numpy(y_tr).type(torch.cuda.FloatTensor)
